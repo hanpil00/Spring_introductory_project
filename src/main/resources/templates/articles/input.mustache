@@ -1,0 +1,29 @@
+{{>layouts/header}}
+
+<form class="container mt-5 p-4 border rounded shadow" action="/articles/create" method="post">
+    <h2 class="mb-4 text-center text-shadow">게시물 작성</h2>
+
+    <div class="mb-3 text-center">
+        <label class="form-label">제목</label>
+        <input type="text" class="form-control mx-auto" name="title" required style="max-width: 400px;">
+    </div>
+
+    <div class="mb-3 text-center">
+        <label class="form-label">내용</label>
+        <textarea class="form-control mx-auto" rows="5" name="content" required style="max-width: 400px;"></textarea>
+    </div>
+
+    <div class="d-flex justify-content-between">
+        <a href="/articles" class="btn btn-outline-secondary">뒤로가기</a>
+        <button type="submit" class="btn btn-primary">등록</button>
+    </div>
+</form>
+
+<style>
+    .text-shadow {
+        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5), /* 첫 번째 그림자 */
+                     0 0 25px rgba(0, 0, 0, 0.4); /* 두 번째 그림자 (더 퍼지는 효과) */
+    }
+</style>
+
+{{>layouts/footer}}
